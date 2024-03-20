@@ -1,6 +1,6 @@
-# Testnet Faucet
+# SyncSwap Smart Contracts
 
-Smart contracts for testnet faucet.
+Smart contracts and scripts for SyncSwap protocol.
 
 ## Local Development
 

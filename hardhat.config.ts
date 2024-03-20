@@ -1,21 +1,16 @@
 require("@matterlabs/hardhat-zksync-deploy");
 require("@matterlabs/hardhat-zksync-solc");
 require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-ethers");
 
 module.exports = {
   // hardhat-zksync-solc
   // The compiler configuration for 'zk' artifacts.
   zksolc: {
-    version: "0.1.0",
-    compilerSource: "docker",
+    version: "latest",
+    compilerSource: "binary",
     settings: {
-      optimizer: {
-        enabled: true,
-        runs: 1000000
-      },
-      experimental: {
-        dockerImage: "matterlabs/zksolc",
-      },
+      compilerPath: "./zksolc-linux-amd64-musl-v1.1.6",
     },
   },
 
@@ -29,11 +24,11 @@ module.exports = {
 
   // The compiler configuration for 'normal' artifacts.
   solidity: {
-    version: "0.8.15",
+    version: "0.5.17",
     settings: {
       optimizer: {
         enabled: true,
-        runs: 200
+        runs: 999999
       }
     }
   },
@@ -51,7 +46,7 @@ module.exports = {
     // Run compile task with this network to generate 'normal' artifacts/cache.
     // For example `yarn hardhat compile --network hardhat`
     hardhat: {
-      chainId: 280
+      chainId: 280,
     },
 
     // Run compile task with this network to generate 'zk' artifacts/cache (with -zk suffix).

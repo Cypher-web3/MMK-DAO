@@ -1,23 +1,22 @@
 {
-  "name": "@syncswap/testnet-faucet",
-  "description": "Smart contracts for SyncSwap testnet faucet",
+  "name": "@syncswap/core",
+  "description": "Core contracts for the SyncSwap protocol",
   "version": "1.0.0",
   "homepage": "https://syncswap.xyz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/syncswap/testnet-faucet"
+    "url": "https://github.com/syncswap/core"
   },
   "keywords": [
     "syncswap",
     "zksync",
-    "ethereum",
-    "faucet",
-    "testnet"
+    "ethereum"
   ],
-  "license": "AGPL-3.0-or-later",
   "devDependencies": {
-    "@matterlabs/hardhat-zksync-deploy": "^0.3.0",
-    "@matterlabs/hardhat-zksync-solc": "^0.3.4",
+    "@matterlabs/hardhat-zksync-deploy": "^0.4.0",
+    "@matterlabs/hardhat-zksync-solc": "^0.3.7",
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
     "@types/chai": "^4.3.1",
     "@types/mocha": "^9.1.1",
     "chai": "^4.3.6",
@@ -28,10 +27,16 @@
     "mocha": "^10.0.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.2",
-    "zksync-web3": "^0.7.4"
+    "zksync-web3": "^0.8.1"
   },
+  "scripts": {
+    "build": "yarn hardhat compile",
+    "compile": "yarn hardhat compile",
+    "test": "yarn hardhat test",
+    "deploy": "./deploy-zksync.sh deployAll"
+  },
+  "license": "AGPL-3.0-or-later",
   "dependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.0.6",
-    "@nomiclabs/hardhat-waffle": "^2.0.3"
+    "@matterlabs/signature-checker": "^1.1.0"
   }
 }
