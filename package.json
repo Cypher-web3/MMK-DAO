@@ -1,14 +1,14 @@
 {
-  "name": "@syncswap/core",
-  "description": "Core contracts for the SyncSwap protocol",
+  "name": "@mmkdao/core",
+  "description": "Core contracts for the MMK DAO protocol",
   "version": "1.0.0",
-  "homepage": "https://syncswap.xyz",
+  "homepage": "https:/mmkdao/s.xyz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/syncswap/core"
+    "url": "https://github.com/cypher-web3/core"
   },
   "keywords": [
-    "syncswap",
+    "mmkdao",
     "zksync",
     "ethereum"
   ],
