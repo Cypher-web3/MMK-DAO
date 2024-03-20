@@ -1,4 +1,4 @@
-# SyncSwap Smart Contracts
+# MMK DAO Smart Contracts
 
 Smart contracts and scripts for SyncSwap protocol.
 
